@@ -13,4 +13,13 @@ class UserModel extends Model
 		return M('User')->where('username=\''.$username.'\'')->find();
 	}
 
+	public function addUser()
+	{
+		return M('User')->add($_POST);
+	}
+
+	public function updateUserById($id)
+	{
+		return M('User')->where('id='.$id)->save($_POST);
+	}
 }
