@@ -36,4 +36,10 @@ class IndexAction extends Action{
 		else
 			$this->error('update failed',__URL__);
 	}
+	
+	public function getlist()
+	{
+		$this->display();
+	}
+
 }
